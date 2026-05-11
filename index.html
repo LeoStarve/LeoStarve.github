@@ -6,10 +6,9 @@
     <title>Leonid Yaniiev | UI/UX Designer Portfolio</title>
     <style>
         :root {
-            /* Adjusted for a more visible gradient */
             --bg-start: #DDDFFF; 
             --bg-end: #B8BEF5; 
-            --card-gold: #EBCB8B;
+            --card-apricot: #FFEEDD; /* Updated project card color */
             --text-main: #2E3440;
             --text-muted: #4C566A;
             --accent-dark: #24292E;
@@ -27,7 +26,6 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
             line-height: 1.6; 
             color: var(--text-main); 
-            /* Improved Gradient visibility */
             background: linear-gradient(180deg, var(--bg-start) 0%, var(--bg-end) 100%);
             background-repeat: no-repeat;
             background-size: cover;
@@ -58,19 +56,20 @@
 
         p { color: var(--text-muted); }
 
-        /* Project Cards */
+        /* Project Cards - Pale Apricot */
         .project { 
             margin-bottom: 2.5rem; 
             padding: 2rem; 
-            border: 1px solid rgba(0,0,0,0.05); 
+            border: 1px solid rgba(0,0,0,0.03); 
             border-radius: 12px; 
-            background-color: var(--card-gold); 
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-            transition: transform 0.2s ease;
+            background-color: var(--card-apricot); 
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
         
         .project:hover {
             transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
         }
 
         .project h3 { 
