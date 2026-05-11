@@ -6,17 +6,18 @@
     <title>Leonid Yaniiev | UI/UX Designer Portfolio</title>
     <style>
         :root {
-            /* Background Colors */
+            /* Background */
             --bg-start: #DADDFF; 
             --bg-end: #B8BEF5; 
             
-            /* Match these to your Project Section */
+            /* Projects Palette (Permanent) */
             --card-apricot: #FFEEDD;
             --text-plum: #4B3F72;
-            
-            /* UI Elements */
-            --skill-bg: rgba(75, 63, 114, 0.1);
-            --accent-dark: #2D2442;
+
+            /* Harmonized Action Color (Slate Indigo) */
+            /* This bridges the gap between the blue background and plum text */
+            --action-primary: #5C6BC0;
+            --action-hover: #4A58A8;
         }
 
         html, body {
@@ -50,99 +51,76 @@
             letter-spacing: -0.5px;
         }
 
-        h2 { 
-            margin-top: 40px; 
-            font-size: 1.5rem;
-            border-bottom: 2px solid rgba(75, 63, 114, 0.1); 
-            padding-bottom: 0.5rem;
-            color: var(--text-plum);
-        }
-
-        /* Unified CTA Area */
         .cta-area {
             display: flex;
-            gap: 12px;
+            gap: 16px;
             align-items: center;
-            margin-top: 1.5rem;
+            margin-top: 2rem;
         }
 
-        /* Email Me - Styled to match Project Text color */
+        /* Email Me - Harmonized Border Style */
         .email-link {
             display: inline-block;
             padding: 12px 24px;
-            border: 2px solid var(--text-plum);
+            border: 2px solid var(--action-primary);
             border-radius: 8px;
             font-weight: 600;
             text-decoration: none; /* No underline */
-            color: var(--text-plum);
+            color: var(--action-primary);
             transition: all 0.2s ease;
         }
         
         .email-link:hover {
-            background-color: var(--text-plum);
+            background-color: var(--action-primary);
             color: #ffffff !important;
         }
 
-        /* Download CV - Styled to match Project Card background */
+        /* Download CV - Balanced Complementary Color */
         .cv-button {
             display: inline-block;
-            background-color: var(--card-apricot);
-            color: var(--text-plum) !important;
+            background-color: var(--action-primary);
+            color: #ffffff !important;
             padding: 12px 24px;
             border-radius: 8px;
             text-decoration: none; /* No underline */
             font-weight: 700;
-            box-shadow: 0 4px 12px rgba(75, 63, 114, 0.1);
+            box-shadow: 0 4px 15px rgba(92, 107, 192, 0.25);
             transition: all 0.2s ease;
-            border: 2px solid var(--card-apricot);
+            border: 2px solid var(--action-primary);
         }
 
         .cv-button:hover {
+            background-color: var(--action-hover);
+            border-color: var(--action-hover);
             transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(75, 63, 114, 0.15);
-            background-color: #fff5eb; /* Slightly lighter apricot */
+            box-shadow: 0 6px 20px rgba(92, 107, 192, 0.35);
         }
 
-        /* Project Cards - Colors unchanged */
+        /* Project Section (Kept as is) */
         .project { 
             margin-bottom: 2.5rem; 
-            padding: 2rem; 
-            border: 1px solid rgba(75, 63, 114, 0.05); 
+            padding: 2.5rem; 
             border-radius: 12px; 
             background-color: var(--card-apricot); 
             box-shadow: 0 10px 25px rgba(75, 63, 114, 0.1);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transition: transform 0.2s ease;
         }
         
-        .project:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 15px 35px rgba(75, 63, 114, 0.15);
-        }
-
-        .project h3 { margin-top: 0; color: var(--text-plum); font-size: 1.4rem; }
-        .project p { color: var(--text-plum); font-weight: 450; opacity: 0.85; }
-        .project a { 
-            display: inline-block;
-            margin-top: 1rem;
-            color: var(--text-plum);
-            text-decoration: underline;
-            text-underline-offset: 4px;
-            font-weight: 600;
-        }
+        .project:hover { transform: translateY(-4px); }
+        .project h3 { margin: 0 0 1rem 0; color: var(--text-plum); font-size: 1.5rem; }
+        .project p { margin-bottom: 1.5rem; opacity: 0.9; }
+        .project a { color: var(--text-plum); font-weight: 700; text-decoration: underline; text-underline-offset: 4px; }
 
         .skills { display: flex; flex-wrap: wrap; gap: 12px; list-style: none; padding: 0; margin-top: 1.5rem; }
         .skills li { 
-            background: var(--skill-bg); 
-            color: var(--text-plum);
+            background: rgba(75, 63, 114, 0.08); 
             padding: 6px 16px; 
             border-radius: 20px; 
             font-size: 0.9em; 
             font-weight: 500;
-            backdrop-filter: blur(4px);
-            border: 1px solid rgba(75, 63, 114, 0.1);
         }
 
-        footer { margin-top: 5rem; text-align: center; font-size: 0.85rem; color: var(--text-plum); opacity: 0.6; }
+        footer { margin-top: 5rem; text-align: center; opacity: 0.5; font-size: 0.85rem; }
     </style>
 </head>
 <body>
@@ -150,7 +128,7 @@
     <div class="container">
         <header>
             <h1>Leonid Yaniiev</h1>
-            <p style="font-size: 1.1rem; font-weight: 500;">UI/UX Designer | Specializing in Mobile Product Design & User Research</p>
+            <p style="font-size: 1.1rem; font-weight: 500; opacity: 0.8;">UI/UX Designer | Specializing in Mobile Product Design & User Research</p>
             <div class="cta-area">
                 <a href="mailto:yaniyev.leonid@email.com" class="email-link">📧 Email Me</a>
                 <a href="Leonid_Yaniiev_CV.pdf" class="cv-button" target="_blank">📄 Download CV</a>
@@ -159,18 +137,13 @@
 
         <section>
             <h2>About</h2>
-            <p>Dispatch and sales manager transitioning to UI/UX design, combining communication skills, analytical thinking, and time management into new user-centered designs. My background in logistics taught me how to manage complexity and anticipate needs, skills I now apply to create clear and intuitive user experiences.</p>
+            <p>Dispatch and sales manager transitioning to UI/UX design, combining communication skills, analytical thinking, and time management into new user-centered designs.</p>
         </section>
 
         <section>
             <h2>Skills</h2>
             <ul class="skills">
-                <li>Figma</li>
-                <li>Adobe XD</li>
-                <li>Prototyping</li>
-                <li>User Research</li>
-                <li>Wireframing</li>
-                <li>Mobile Design</li>
+                <li>Figma</li><li>Adobe XD</li><li>Prototyping</li><li>User Research</li><li>Wireframing</li><li>Mobile Design</li>
             </ul>
         </section>
 
