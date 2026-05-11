@@ -5,65 +5,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leonid Yaniiev | UI/UX Designer Portfolio</title>
     <style>
+        :root {
+            --bg-start: #DDDFFF;
+            --bg-end: #C8CDFB;
+            --card-gold: #EBCB8B;
+            --text-main: #2E3440;
+            --text-muted: #4C566A;
+            --accent-dark: #24292E;
+            --skill-bg: rgba(36, 41, 46, 0.08);
+        }
+
         body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
             line-height: 1.6; 
-            color: #333; 
-            max-width: 800px; 
+            color: var(--text-main); 
+            max-width: 850px; 
             margin: 0 auto; 
-            padding: 2rem; 
-            background-color: #DDDFFF; 
+            padding: 3rem 1.5rem; 
+            /* Subtle Linear Gradient */
+            background: linear-gradient(135deg, var(--bg-start) 0%, var(--bg-end) 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
         }
-        h1 { border-bottom: 1px solid #c9ccd1; padding-bottom: 0.3em; }
-        h2 { margin-top: 24px; border-bottom: 1px solid #c9ccd1; padding-bottom: 0.3em; }
+
+        header { margin-bottom: 4rem; }
         
-        /* Individual Project Cards updated to Muted Gold */
+        h1 { 
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent-dark);
+            letter-spacing: -0.5px;
+        }
+
+        h2 { 
+            margin-top: 40px; 
+            font-size: 1.5rem;
+            border-bottom: 2px solid rgba(0,0,0,0.05); 
+            padding-bottom: 0.5rem;
+            color: var(--accent-dark);
+        }
+
+        p { color: var(--text-muted); }
+
+        /* Project Cards */
         .project { 
-            margin-bottom: 2rem; 
-            padding: 1.5rem; 
-            border: 1px solid #d4b477; 
-            border-radius: 8px; 
-            background-color: #EBCB8B; 
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 2.5rem; 
+            padding: 2rem; 
+            border: 1px solid rgba(0,0,0,0.05); 
+            border-radius: 12px; 
+            background-color: var(--card-gold); 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease;
         }
-        .project h3 { margin-top: 0; color: #222; }
-        .project p { color: #444; }
         
-        /* Link color adjusted for better contrast on gold */
-        a { color: #0366d6; text-decoration: none; font-weight: 500; }
+        .project:hover {
+            transform: translateY(-4px);
+        }
+
+        .project h3 { 
+            margin-top: 0; 
+            color: #1a1a1a;
+            font-size: 1.4rem;
+        }
+
+        .project p { color: #3d3d3d; font-weight: 450; }
+
+        /* Links */
+        a { color: #0366d6; text-decoration: none; font-weight: 600; }
         a:hover { text-decoration: underline; }
-        .project a { color: #004494; border-bottom: 1px solid transparent; }
-        .project a:hover { border-bottom: 1px solid #004494; }
-        
-        .skills { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; }
-        .skills li { background: #f6f8fa; padding: 5px 12px; border-radius: 15px; font-size: 0.9em; border: 1px solid #d1d5da; }
-        
-        /* CV Button Style */
+
+        .project a { 
+            display: inline-block;
+            margin-top: 1rem;
+            color: #1a1a1a;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        /* Skills Section */
+        .skills { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 12px; 
+            list-style: none; 
+            padding: 0; 
+            margin-top: 1.5rem;
+        }
+
+        .skills li { 
+            background: var(--skill-bg); 
+            color: var(--accent-dark);
+            padding: 6px 16px; 
+            border-radius: 20px; 
+            font-size: 0.9em; 
+            font-weight: 500;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        /* CV Button */
         .cv-button {
             display: inline-block;
-            background-color: #24292e;
-            color: white !important;
-            padding: 10px 20px;
-            border-radius: 6px;
+            background-color: var(--accent-dark);
+            color: #ffffff !important;
+            padding: 12px 24px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            margin-top: 10px;
-            transition: background-color 0.2s;
+            margin-top: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: all 0.2s ease;
         }
+
         .cv-button:hover {
-            background-color: #444d56;
+            background-color: #000000;
+            transform: scale(1.02);
             text-decoration: none;
         }
 
-        header { margin-bottom: 3rem; }
-        footer { margin-top: 4rem; text-align: center; font-size: 0.9em; color: #666; }
+        footer { 
+            margin-top: 5rem; 
+            text-align: center; 
+            font-size: 0.85rem; 
+            color: var(--text-muted); 
+            opacity: 0.7;
+        }
     </style>
 </head>
 <body>
 
     <header>
         <h1>Leonid Yaniiev</h1>
-        <p>UI/UX Designer | Specializing in Mobile Product Design & User Research</p>
+        <p style="font-size: 1.1rem; font-weight: 500;">UI/UX Designer | Specializing in Mobile Product Design & User Research</p>
         <p><a href="mailto:yaniyev.leonid@email.com">📧 Email Me</a></p>
         <a href="Leonid_Yaniiev_CV.pdf" class="cv-button" target="_blank">📄 Download CV</a>
     </header>
