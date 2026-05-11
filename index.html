@@ -10,8 +10,10 @@
     
     <style>
         :root {
+            /* Stronger Gradient Colors for visibility */
             --bg-start: #DADDFF; 
-            --bg-end: #B8BEF5; 
+            --bg-end: #A0ACF0; /* Deepened this to make the gradient pop */
+            
             --card-apricot: #FFEEDD;
             --text-plum: #4B3F72;
             --action-primary: #5C6BC0;
@@ -29,10 +31,10 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
             line-height: 1.6; 
             color: var(--text-plum); 
+            /* Improved Gradient Declaration */
             background: linear-gradient(180deg, var(--bg-start) 0%, var(--bg-end) 100%);
             background-repeat: no-repeat;
-            background-size: cover;
-            background-attachment: fixed;
+            background-attachment: fixed; /* Keeps gradient in place while scrolling */
         }
 
         .container {
@@ -100,7 +102,7 @@
             transform: translateY(-2px);
         }
 
-        h2 { font-size: 1.6rem; margin-top: 3rem; margin-bottom: 1.5rem; }
+        h2 { font-size: 1.6rem; margin-top: 3rem; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(75, 63, 114, 0.1); padding-bottom: 0.5rem; }
 
         .skills { 
             display: flex; 
@@ -169,7 +171,7 @@
             <ul class="skills">
                 <li><i class="ph ph-figma-logo"></i> Figma</li>
                 <li><i class="ph ph-paint-brush-broad"></i> Adobe XD</li>
-                <li><i class="ph ph-intersect-three"></i> Prototyping</li>
+                <li><i class="ph ph-hand-pointing"></i> Prototyping</li>
                 <li><i class="ph ph-magnifying-glass"></i> User Research</li>
                 <li><i class="ph ph-bounding-box"></i> Wireframing</li>
                 <li><i class="ph ph-device-mobile"></i> Mobile Design</li>
