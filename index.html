@@ -10,15 +10,10 @@
     
     <style>
         :root {
-            /* Background Gradient */
             --bg-start: #DADDFF; 
             --bg-end: #B8BEF5; 
-            
-            /* Projects Palette */
             --card-apricot: #FFEEDD;
             --text-plum: #4B3F72;
-
-            /* Harmonized Action Color (Slate Indigo) */
             --action-primary: #5C6BC0;
             --action-hover: #4A58A8;
         }
@@ -46,7 +41,6 @@
             padding: 4rem 1.5rem;
         }
 
-        /* --- Header Section --- */
         header { margin-bottom: 4rem; }
         
         h1 { 
@@ -69,7 +63,6 @@
             align-items: center;
         }
 
-        /* --- Buttons --- */
         .copy-btn, .cv-button {
             display: inline-flex;
             align-items: center;
@@ -80,7 +73,7 @@
             font-family: inherit;
             font-size: 1rem;
             cursor: pointer;
-            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.25s ease;
             text-decoration: none;
         }
 
@@ -104,18 +97,10 @@
 
         .cv-button:hover {
             background-color: var(--action-hover);
-            border-color: var(--action-hover);
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(92, 107, 192, 0.3);
         }
 
-        /* --- Skills Section --- */
-        h2 { 
-            font-size: 1.6rem; 
-            margin-top: 3rem; 
-            margin-bottom: 1.5rem;
-            color: var(--text-plum);
-        }
+        h2 { font-size: 1.6rem; margin-top: 3rem; margin-bottom: 1.5rem; }
 
         .skills { 
             display: flex; 
@@ -138,13 +123,8 @@
             border: 1px solid rgba(75, 63, 114, 0.1);
         }
 
-        .skills i {
-            font-size: 1.2rem;
-            color: inherit;
-            opacity: 0.9;
-        }
+        .skills i { font-size: 1.2rem; opacity: 0.9; }
 
-        /* --- Projects Section --- */
         .project { 
             margin-bottom: 2.5rem; 
             padding: 2.5rem; 
@@ -155,16 +135,9 @@
         }
         
         .project:hover { transform: translateY(-5px); }
-        .project h3 { margin: 0 0 1rem 0; font-size: 1.5rem; color: var(--text-plum); }
-        .project p { margin-bottom: 1.5rem; opacity: 0.85; line-height: 1.5; }
-        .project a { 
-            color: var(--text-plum); 
-            font-weight: 700; 
-            text-decoration: underline; 
-            text-underline-offset: 5px; 
-            transition: opacity 0.2s;
-        }
-        .project a:hover { opacity: 0.7; }
+        .project h3 { margin: 0 0 1rem 0; font-size: 1.5rem; }
+        .project p { margin-bottom: 1.5rem; opacity: 0.85; }
+        .project a { color: var(--text-plum); font-weight: 700; text-decoration: underline; text-underline-offset: 5px; }
 
         footer { margin-top: 6rem; padding-bottom: 3rem; text-align: center; opacity: 0.5; font-size: 0.9rem; }
     </style>
@@ -188,14 +161,14 @@
 
         <section>
             <h2>About</h2>
-            <p>Dispatch and sales manager transitioning to UI/UX design. I combine deep communication skills and analytical thinking from logistics with a user-centered design approach. My goal is to build digital products that are as efficient as they are visually balanced.</p>
+            <p>Dispatch and sales manager transitioning to UI/UX design. I combine deep communication skills and analytical thinking from logistics with a user-centered design approach to build intuitive digital products.</p>
         </section>
 
         <section>
             <h2>Skills</h2>
             <ul class="skills">
                 <li><i class="ph ph-figma-logo"></i> Figma</li>
-                <li><i class="ph ph-adobe-logo"></i> Adobe XD</li>
+                <li><i class="ph ph-paint-brush-broad"></i> Adobe XD</li>
                 <li><i class="ph ph-intersect-three"></i> Prototyping</li>
                 <li><i class="ph ph-magnifying-glass"></i> User Research</li>
                 <li><i class="ph ph-bounding-box"></i> Wireframing</li>
@@ -250,8 +223,6 @@
             navigator.clipboard.writeText(email).then(() => {
                 const originalContent = btn.innerHTML;
                 btn.innerHTML = "<i class='ph ph-check-circle'></i> Copied!";
-                
-                // Temporary visual feedback
                 btn.style.backgroundColor = "var(--action-primary)";
                 btn.style.color = "#ffffff";
 
@@ -260,8 +231,6 @@
                     btn.style.backgroundColor = "transparent";
                     btn.style.color = "var(--action-primary)";
                 }, 2000);
-            }).catch(err => {
-                console.error('Failed to copy email: ', err);
             });
         }
     </script>
