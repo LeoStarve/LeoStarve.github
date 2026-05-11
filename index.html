@@ -10,16 +10,13 @@
             --bg-start: #DADDFF; 
             --bg-end: #B8BEF5; 
             
-            /* Project Card (Sunset Minimalist) */
+            /* Match these to your Project Section */
             --card-apricot: #FFEEDD;
-            
-            /* Text Color (Deep Plum) */
             --text-plum: #4B3F72;
             
-            /* New Accent Colors */
-            --cv-accent: #D66D5B; /* Deep Coral/Terracotta */
-            --cv-accent-hover: #BF5A4A;
+            /* UI Elements */
             --skill-bg: rgba(75, 63, 114, 0.1);
+            --accent-dark: #2D2442;
         }
 
         html, body {
@@ -61,68 +58,91 @@
             color: var(--text-plum);
         }
 
-        /* Stand-out Email Line */
+        /* Unified CTA Area */
+        .cta-area {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            margin-top: 1.5rem;
+        }
+
+        /* Email Me - Styled to match Project Text color */
         .email-link {
             display: inline-block;
-            margin-right: 15px;
-            padding: 10px 20px;
+            padding: 12px 24px;
             border: 2px solid var(--text-plum);
             border-radius: 8px;
-            font-weight: 700;
+            font-weight: 600;
+            text-decoration: none; /* No underline */
+            color: var(--text-plum);
             transition: all 0.2s ease;
         }
+        
         .email-link:hover {
             background-color: var(--text-plum);
             color: #ffffff !important;
-            text-decoration: none;
         }
 
-        /* Updated CV Button */
+        /* Download CV - Styled to match Project Card background */
         .cv-button {
             display: inline-block;
-            background-color: var(--cv-accent);
-            color: #ffffff !important;
+            background-color: var(--card-apricot);
+            color: var(--text-plum) !important;
             padding: 12px 24px;
             border-radius: 8px;
-            text-decoration: none;
+            text-decoration: none; /* No underline */
             font-weight: 700;
-            margin-top: 1.5rem;
-            box-shadow: 0 4px 15px rgba(214, 109, 91, 0.3);
+            box-shadow: 0 4px 12px rgba(75, 63, 114, 0.1);
             transition: all 0.2s ease;
-            border: 2px solid var(--cv-accent);
+            border: 2px solid var(--card-apricot);
         }
 
         .cv-button:hover {
-            background-color: var(--cv-accent-hover);
-            border-color: var(--cv-accent-hover);
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(214, 109, 91, 0.4);
-            text-decoration: none;
+            box-shadow: 0 6px 15px rgba(75, 63, 114, 0.15);
+            background-color: #fff5eb; /* Slightly lighter apricot */
         }
 
+        /* Project Cards - Colors unchanged */
         .project { 
             margin-bottom: 2.5rem; 
             padding: 2rem; 
+            border: 1px solid rgba(75, 63, 114, 0.05); 
             border-radius: 12px; 
             background-color: var(--card-apricot); 
             box-shadow: 0 10px 25px rgba(75, 63, 114, 0.1);
-            transition: transform 0.2s ease;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
         
-        .project:hover { transform: translateY(-4px); }
-        .project h3 { margin-top: 0; color: var(--text-plum); }
-        .project a { font-weight: 600; text-decoration: underline; color: var(--text-plum); }
+        .project:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(75, 63, 114, 0.15);
+        }
 
-        .skills { display: flex; flex-wrap: wrap; gap: 12px; list-style: none; padding: 0; }
+        .project h3 { margin-top: 0; color: var(--text-plum); font-size: 1.4rem; }
+        .project p { color: var(--text-plum); font-weight: 450; opacity: 0.85; }
+        .project a { 
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--text-plum);
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            font-weight: 600;
+        }
+
+        .skills { display: flex; flex-wrap: wrap; gap: 12px; list-style: none; padding: 0; margin-top: 1.5rem; }
         .skills li { 
             background: var(--skill-bg); 
+            color: var(--text-plum);
             padding: 6px 16px; 
             border-radius: 20px; 
             font-size: 0.9em; 
+            font-weight: 500;
+            backdrop-filter: blur(4px);
             border: 1px solid rgba(75, 63, 114, 0.1);
         }
 
-        footer { margin-top: 5rem; text-align: center; opacity: 0.6; }
+        footer { margin-top: 5rem; text-align: center; font-size: 0.85rem; color: var(--text-plum); opacity: 0.6; }
     </style>
 </head>
 <body>
@@ -130,9 +150,7 @@
     <div class="container">
         <header>
             <h1>Leonid Yaniiev</h1>
-            <p style="font-size: 1.1rem; font-weight: 500; margin-bottom: 2rem;">
-                UI/UX Designer | Specializing in Mobile Product Design & User Research
-            </p>
+            <p style="font-size: 1.1rem; font-weight: 500;">UI/UX Designer | Specializing in Mobile Product Design & User Research</p>
             <div class="cta-area">
                 <a href="mailto:yaniyev.leonid@email.com" class="email-link">📧 Email Me</a>
                 <a href="Leonid_Yaniiev_CV.pdf" class="cv-button" target="_blank">📄 Download CV</a>
