@@ -6,13 +6,19 @@
     <title>Leonid Yaniiev | UI/UX Designer Portfolio</title>
     <style>
         :root {
-            --bg-start: #DDDFFF; 
+            /* Background Colors */
+            --bg-start: #DADDFF; 
             --bg-end: #B8BEF5; 
-            --card-mint: #DEFFDD; /* Updated project card color */
-            --text-main: #2E3440;
-            --text-muted: #4C566A;
-            --accent-dark: #24292E;
-            --skill-bg: rgba(36, 41, 46, 0.1);
+            
+            /* Project Card (Sunset Minimalist) */
+            --card-apricot: #FFEEDD;
+            
+            /* Text Color (Deep Plum) */
+            --text-plum: #4B3F72;
+            
+            /* UI Elements */
+            --skill-bg: rgba(75, 63, 114, 0.1); /* Plum with transparency */
+            --accent-dark: #2D2442; /* Slightly darker plum for buttons */
         }
 
         html, body {
@@ -25,7 +31,8 @@
         body { 
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
             line-height: 1.6; 
-            color: var(--text-main); 
+            color: var(--text-plum); 
+            /* Gradient Background */
             background: linear-gradient(180deg, var(--bg-start) 0%, var(--bg-end) 100%);
             background-repeat: no-repeat;
             background-size: cover;
@@ -42,52 +49,52 @@
         h1 { 
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
-            color: var(--accent-dark);
+            color: var(--text-plum);
             letter-spacing: -0.5px;
         }
 
         h2 { 
             margin-top: 40px; 
             font-size: 1.5rem;
-            border-bottom: 2px solid rgba(0,0,0,0.05); 
+            border-bottom: 2px solid rgba(75, 63, 114, 0.1); 
             padding-bottom: 0.5rem;
-            color: var(--accent-dark);
+            color: var(--text-plum);
         }
 
-        p { color: var(--text-muted); }
+        p { color: var(--text-plum); opacity: 0.9; }
 
-        /* Project Cards - Mint Green */
+        /* Project Cards - Pale Apricot */
         .project { 
             margin-bottom: 2.5rem; 
             padding: 2rem; 
-            border: 1px solid rgba(0,0,0,0.03); 
+            border: 1px solid rgba(75, 63, 114, 0.05); 
             border-radius: 12px; 
-            background-color: var(--card-mint); 
-            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+            background-color: var(--card-apricot); 
+            box-shadow: 0 10px 25px rgba(75, 63, 114, 0.1);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
         
         .project:hover {
             transform: translateY(-4px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 35px rgba(75, 63, 114, 0.15);
         }
 
         .project h3 { 
             margin-top: 0; 
-            color: #1a1a1a;
+            color: var(--text-plum);
             font-size: 1.4rem;
         }
 
-        .project p { color: #3d3d3d; font-weight: 450; }
+        .project p { color: var(--text-plum); font-weight: 450; opacity: 0.85; }
 
         /* Links */
-        a { color: #0366d6; text-decoration: none; font-weight: 600; }
+        a { color: var(--text-plum); text-decoration: none; font-weight: 600; }
         a:hover { text-decoration: underline; }
 
         .project a { 
             display: inline-block;
             margin-top: 1rem;
-            color: #1a1a1a;
+            color: var(--text-plum);
             text-decoration: underline;
             text-underline-offset: 4px;
         }
@@ -104,19 +111,19 @@
 
         .skills li { 
             background: var(--skill-bg); 
-            color: var(--accent-dark);
+            color: var(--text-plum);
             padding: 6px 16px; 
             border-radius: 20px; 
             font-size: 0.9em; 
             font-weight: 500;
             backdrop-filter: blur(4px);
-            border: 1px solid rgba(0,0,0,0.05);
+            border: 1px solid rgba(75, 63, 114, 0.1);
         }
 
         /* CV Button */
         .cv-button {
             display: inline-block;
-            background-color: var(--accent-dark);
+            background-color: var(--text-plum);
             color: #ffffff !important;
             padding: 12px 24px;
             border-radius: 8px;
@@ -128,7 +135,7 @@
         }
 
         .cv-button:hover {
-            background-color: #000000;
+            background-color: var(--accent-dark);
             transform: scale(1.02);
             text-decoration: none;
         }
@@ -137,8 +144,8 @@
             margin-top: 5rem; 
             text-align: center; 
             font-size: 0.85rem; 
-            color: var(--text-muted); 
-            opacity: 0.7;
+            color: var(--text-plum); 
+            opacity: 0.6;
         }
     </style>
 </head>
@@ -154,7 +161,7 @@
 
         <section>
             <h2>About</h2>
-            <p>Dispatch and sales manager transitioning to UI/UX design, combining communication skills, analytical thinking, and time management into new user-centered designs. I am curious and empathetic by nature. My background in logistics taught me how to manage complexity and anticipate needs, skills I now apply to create clear and intuitive user experiences.</p>
+            <p>Dispatch and sales manager transitioning to UI/UX design, combining communication skills, analytical thinking, and time management into new user-centered designs. My background in logistics taught me how to manage complexity and anticipate needs, skills I now apply to create clear and intuitive user experiences.</p>
         </section>
 
         <section>
