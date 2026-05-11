@@ -4,19 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leonid Yaniiev | UI/UX Designer Portfolio</title>
+    
     <!-- Phosphor Icons Library -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
     <style>
         :root {
+            /* Background Gradient */
             --bg-start: #DADDFF; 
             --bg-end: #B8BEF5; 
+            
+            /* Projects Palette */
             --card-apricot: #FFEEDD;
             --text-plum: #4B3F72;
+
+            /* Harmonized Action Color (Slate Indigo) */
             --action-primary: #5C6BC0;
             --action-hover: #4A58A8;
         }
 
-        html, body { margin: 0; padding: 0; width: 100%; min-height: 100vh; }
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 100vh;
+        }
 
         body { 
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
@@ -25,89 +37,136 @@
             background: linear-gradient(180deg, var(--bg-start) 0%, var(--bg-end) 100%);
             background-repeat: no-repeat;
             background-size: cover;
+            background-attachment: fixed;
         }
 
-        .container { max-width: 850px; margin: 0 auto; padding: 3rem 1.5rem; }
+        .container {
+            max-width: 850px; 
+            margin: 0 auto; 
+            padding: 4rem 1.5rem;
+        }
 
+        /* --- Header Section --- */
         header { margin-bottom: 4rem; }
         
-        h1 { font-size: 2.5rem; margin-bottom: 0.5rem; letter-spacing: -0.5px; }
+        h1 { 
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-plum);
+            letter-spacing: -0.8px;
+        }
 
-        .cta-area { display: flex; gap: 16px; align-items: center; margin-top: 2rem; }
+        .subtitle {
+            font-size: 1.2rem;
+            font-weight: 500;
+            opacity: 0.85;
+            margin-bottom: 2rem;
+        }
+
+        .cta-area {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        /* --- Buttons --- */
+        .copy-btn, .cv-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-family: inherit;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+        }
 
         .copy-btn {
-            padding: 12px 24px;
-            border: 2px solid var(--action-primary);
-            border-radius: 8px;
-            font-weight: 600;
             background: transparent;
+            border: 2px solid var(--action-primary);
             color: var(--action-primary);
-            cursor: pointer;
-            font-family: inherit;
-            transition: all 0.2s ease;
         }
         
-        .copy-btn:hover { background-color: var(--action-primary); color: #ffffff; }
+        .copy-btn:hover {
+            background-color: var(--action-primary);
+            color: #ffffff;
+        }
 
         .cv-button {
             background-color: var(--action-primary);
             color: #ffffff !important;
-            padding: 12px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 700;
-            box-shadow: 0 4px 15px rgba(92, 107, 192, 0.25);
-            transition: all 0.2s ease;
             border: 2px solid var(--action-primary);
+            box-shadow: 0 4px 15px rgba(92, 107, 192, 0.2);
         }
 
         .cv-button:hover {
             background-color: var(--action-hover);
+            border-color: var(--action-hover);
             transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(92, 107, 192, 0.3);
         }
 
-        /* Skills Section with Icons */
+        /* --- Skills Section --- */
+        h2 { 
+            font-size: 1.6rem; 
+            margin-top: 3rem; 
+            margin-bottom: 1.5rem;
+            color: var(--text-plum);
+        }
+
         .skills { 
             display: flex; 
             flex-wrap: wrap; 
-            gap: 12px; 
+            gap: 10px; 
             list-style: none; 
             padding: 0; 
-            margin-top: 1.5rem; 
         }
 
         .skills li { 
-            background: rgba(75, 63, 114, 0.08); 
+            background: rgba(75, 63, 114, 0.07); 
             padding: 8px 18px; 
-            border-radius: 20px; 
-            font-size: 0.95em; 
+            border-radius: 24px; 
+            font-size: 0.95rem; 
             font-weight: 500;
             display: flex;
             align-items: center;
-            gap: 8px; /* Space between icon and text */
+            gap: 8px;
             color: var(--text-plum);
             border: 1px solid rgba(75, 63, 114, 0.1);
         }
 
-        /* Make icons slightly smaller and inherit text color */
         .skills i {
-            font-size: 1.2em;
-            color: inherit; 
-            opacity: 0.8;
+            font-size: 1.2rem;
+            color: inherit;
+            opacity: 0.9;
         }
 
+        /* --- Projects Section --- */
         .project { 
             margin-bottom: 2.5rem; 
             padding: 2.5rem; 
-            border-radius: 12px; 
+            border-radius: 16px; 
             background-color: var(--card-apricot); 
-            box-shadow: 0 10px 25px rgba(75, 63, 114, 0.1);
+            box-shadow: 0 10px 30px rgba(75, 63, 114, 0.08);
+            transition: transform 0.3s ease;
         }
         
-        .project h3 { margin: 0 0 1rem 0; color: var(--text-plum); }
-        .project a { color: var(--text-plum); font-weight: 700; text-underline-offset: 4px; }
+        .project:hover { transform: translateY(-5px); }
+        .project h3 { margin: 0 0 1rem 0; font-size: 1.5rem; color: var(--text-plum); }
+        .project p { margin-bottom: 1.5rem; opacity: 0.85; line-height: 1.5; }
+        .project a { 
+            color: var(--text-plum); 
+            font-weight: 700; 
+            text-decoration: underline; 
+            text-underline-offset: 5px; 
+            transition: opacity 0.2s;
+        }
+        .project a:hover { opacity: 0.7; }
 
-        footer { margin-top: 5rem; text-align: center; opacity: 0.5; font-size: 0.85rem; }
+        footer { margin-top: 6rem; padding-bottom: 3rem; text-align: center; opacity: 0.5; font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -115,7 +174,8 @@
     <div class="container">
         <header>
             <h1>Leonid Yaniiev</h1>
-            <p style="font-size: 1.1rem; font-weight: 500; opacity: 0.8;">UI/UX Designer | Specializing in Mobile Product Design & User Research</p>
+            <p class="subtitle">UI/UX Designer | Specializing in Mobile Product Design & User Research</p>
+            
             <div class="cta-area">
                 <button class="copy-btn" id="emailBtn" onclick="copyEmail()">
                     <i class="ph ph-envelope-simple"></i> Email Me
@@ -127,13 +187,18 @@
         </header>
 
         <section>
+            <h2>About</h2>
+            <p>Dispatch and sales manager transitioning to UI/UX design. I combine deep communication skills and analytical thinking from logistics with a user-centered design approach. My goal is to build digital products that are as efficient as they are visually balanced.</p>
+        </section>
+
+        <section>
             <h2>Skills</h2>
             <ul class="skills">
                 <li><i class="ph ph-figma-logo"></i> Figma</li>
                 <li><i class="ph ph-adobe-logo"></i> Adobe XD</li>
-                <li><i class="ph ph-arrows-clockwise"></i> Prototyping</li>
+                <li><i class="ph ph-intersect-three"></i> Prototyping</li>
                 <li><i class="ph ph-magnifying-glass"></i> User Research</li>
-                <li><i class="ph ph-layout"></i> Wireframing</li>
+                <li><i class="ph ph-bounding-box"></i> Wireframing</li>
                 <li><i class="ph ph-device-mobile"></i> Mobile Design</li>
             </ul>
         </section>
@@ -143,32 +208,32 @@
             
             <div class="project">
                 <h3>AI Assistant, Clickable Prototype</h3>
-                <p>An interactive prototype created in Figma that shows key user flows and is ready for further improvement.</p>
-                <a href="https://www.figma.com/design/Lc6S6XEqxZ9JDHg4Lsv7YD/AI-assistant---Clickable-prototype?node-id=0-1&t=8MVng9BdkMdLvIR8-1" target="_blank">View Case Study →</a>
+                <p>An interactive prototype created in Figma that demonstrates key user flows and interaction logic.</p>
+                <a href="https://www.figma.com/design/Lc6S6XEqxZ9JDHg4Lsv7YD/AI-assistant---Clickable-prototype?node-id=0-1" target="_blank">View Case Study →</a>
             </div>
 
             <div class="project">
                 <h3>Welcome Screen, Work with Color</h3>
-                <p>An exploratory project that tests color combinations and visual hierarchy to create balanced designs.</p>
-                <a href="https://www.figma.com/design/azjFi6lCvGrzFvZPiVQAp4/Welcome-screen--Work-with-color?node-id=0-1&t=a49GJGRQDIVVmwDg-1" target="_blank">View Case Study →</a>
+                <p>An exploratory project focusing on accessibility, color theory, and visual hierarchy in onboarding screens.</p>
+                <a href="https://www.figma.com/design/azjFi6lCvGrzFvZPiVQAp4/Welcome-screen--Work-with-color?node-id=0-1" target="_blank">View Case Study →</a>
             </div>
           
             <div class="project">
                 <h3>Browse Music, Home Screen</h3>
-                <p>A UX review of Spotify’s browsing experience, focusing on interaction flow, scroll behavior, and layout usability.</p>
-                <a href="https://www.figma.com/design/w4DuiRw2vR6DqkJzk9HjqG/Browse-music--Home-screen?node-id=0-1&t=qA4hAfceT9tldtrW-1" target="_blank">View Case Study →</a>
+                <p>A UX audit and redesign of music browsing interfaces, focusing on scroll behavior and content discoverability.</p>
+                <a href="https://www.figma.com/design/w4DuiRw2vR6DqkJzk9HjqG/Browse-music--Home-screen?node-id=0-1" target="_blank">View Case Study →</a>
             </div>
           
             <div class="project">
                 <h3>Calendar Template</h3>
-                <p>A structured calendar placeholder designed using properly configured Auto Layouts to ensure scalability and consistency.</p>
-                <a href="https://www.figma.com/design/l2J2bHoqF8u5WTIFZBLYC2/Calendar-Template?node-id=0-1&t=yOxBMHJd8sFS1DjO-1" target="_blank">View Case Study →</a>
+                <p>A scalable calendar system built with Auto Layout and component properties for maximum design consistency.</p>
+                <a href="https://www.figma.com/design/l2J2bHoqF8u5WTIFZBLYC2/Calendar-Template?node-id=0-1" target="_blank">View Case Study →</a>
             </div>
           
             <div class="project">
                 <h3>Smart Home App</h3>
-                <p>A minimalist smart-home control interface that emphasizes clarity, balance, and easy user interaction.</p>
-                <a href="https://www.figma.com/design/SBwiBhA2ITwxuOb6unmwR7/Smart-Home-App?node-id=0-1&t=L6N9XUenWOvSoP6C-1" target="_blank">View Case Study →</a>
+                <p>A clean, minimalist mobile interface designed for controlling IoT devices with minimal cognitive load.</p>
+                <a href="https://www.figma.com/design/SBwiBhA2ITwxuOb6unmwR7/Smart-Home-App?node-id=0-1" target="_blank">View Case Study →</a>
             </div>
         </section>
 
@@ -183,16 +248,20 @@
             const btn = document.getElementById('emailBtn');
             
             navigator.clipboard.writeText(email).then(() => {
-                const originalText = btn.innerHTML;
+                const originalContent = btn.innerHTML;
                 btn.innerHTML = "<i class='ph ph-check-circle'></i> Copied!";
+                
+                // Temporary visual feedback
                 btn.style.backgroundColor = "var(--action-primary)";
                 btn.style.color = "#ffffff";
 
                 setTimeout(() => {
-                    btn.innerHTML = originalText;
+                    btn.innerHTML = originalContent;
                     btn.style.backgroundColor = "transparent";
                     btn.style.color = "var(--action-primary)";
                 }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy email: ', err);
             });
         }
     </script>
