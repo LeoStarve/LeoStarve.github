@@ -6,26 +6,37 @@
     <title>Leonid Yaniiev | UI/UX Designer Portfolio</title>
     <style>
         :root {
-            --bg-start: #DDDFFF;
-            --bg-end: #C8CDFB;
+            /* Adjusted for a more visible gradient */
+            --bg-start: #DDDFFF; 
+            --bg-end: #B8BEF5; 
             --card-gold: #EBCB8B;
             --text-main: #2E3440;
             --text-muted: #4C566A;
             --accent-dark: #24292E;
-            --skill-bg: rgba(36, 41, 46, 0.08);
+            --skill-bg: rgba(36, 41, 46, 0.1);
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 100vh;
         }
 
         body { 
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
             line-height: 1.6; 
             color: var(--text-main); 
+            /* Improved Gradient visibility */
+            background: linear-gradient(180deg, var(--bg-start) 0%, var(--bg-end) 100%);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .container {
             max-width: 850px; 
             margin: 0 auto; 
-            padding: 3rem 1.5rem; 
-            /* Subtle Linear Gradient */
-            background: linear-gradient(135deg, var(--bg-start) 0%, var(--bg-end) 100%);
-            background-attachment: fixed;
-            min-height: 100vh;
+            padding: 3rem 1.5rem;
         }
 
         header { margin-bottom: 4rem; }
@@ -134,67 +145,69 @@
 </head>
 <body>
 
-    <header>
-        <h1>Leonid Yaniiev</h1>
-        <p style="font-size: 1.1rem; font-weight: 500;">UI/UX Designer | Specializing in Mobile Product Design & User Research</p>
-        <p><a href="mailto:yaniyev.leonid@email.com">📧 Email Me</a></p>
-        <a href="Leonid_Yaniiev_CV.pdf" class="cv-button" target="_blank">📄 Download CV</a>
-    </header>
+    <div class="container">
+        <header>
+            <h1>Leonid Yaniiev</h1>
+            <p style="font-size: 1.1rem; font-weight: 500;">UI/UX Designer | Specializing in Mobile Product Design & User Research</p>
+            <p><a href="mailto:yaniyev.leonid@email.com">📧 Email Me</a></p>
+            <a href="Leonid_Yaniiev_CV.pdf" class="cv-button" target="_blank">📄 Download CV</a>
+        </header>
 
-    <section>
-        <h2>About</h2>
-        <p>Dispatch and sales manager transitioning to UI/UX design, combining communication skills, analytical thinking, and time management into new user-centered designs. I am curious and empathetic by nature. My background in logistics taught me how to manage complexity and anticipate needs, skills I now apply to create clear and intuitive user experiences.</p>
-    </section>
+        <section>
+            <h2>About</h2>
+            <p>Dispatch and sales manager transitioning to UI/UX design, combining communication skills, analytical thinking, and time management into new user-centered designs. I am curious and empathetic by nature. My background in logistics taught me how to manage complexity and anticipate needs, skills I now apply to create clear and intuitive user experiences.</p>
+        </section>
 
-    <section>
-        <h2>Skills</h2>
-        <ul class="skills">
-            <li>Figma</li>
-            <li>Adobe XD</li>
-            <li>Prototyping</li>
-            <li>User Research</li>
-            <li>Wireframing</li>
-            <li>Mobile Design</li>
-        </ul>
-    </section>
+        <section>
+            <h2>Skills</h2>
+            <ul class="skills">
+                <li>Figma</li>
+                <li>Adobe XD</li>
+                <li>Prototyping</li>
+                <li>User Research</li>
+                <li>Wireframing</li>
+                <li>Mobile Design</li>
+            </ul>
+        </section>
 
-    <section>
-        <h2>Projects</h2>
-        
-        <div class="project">
-            <h3>AI Assistant, Clickable Prototype</h3>
-            <p>An interactive prototype created in Figma that shows key user flows and is ready for further improvement.</p>
-            <a href="https://www.figma.com/design/Lc6S6XEqxZ9JDHg4Lsv7YD/AI-assistant---Clickable-prototype?node-id=0-1&t=8MVng9BdkMdLvIR8-1" target="_blank">View Case Study →</a>
-        </div>
+        <section>
+            <h2>Projects</h2>
+            
+            <div class="project">
+                <h3>AI Assistant, Clickable Prototype</h3>
+                <p>An interactive prototype created in Figma that shows key user flows and is ready for further improvement.</p>
+                <a href="https://www.figma.com/design/Lc6S6XEqxZ9JDHg4Lsv7YD/AI-assistant---Clickable-prototype?node-id=0-1&t=8MVng9BdkMdLvIR8-1" target="_blank">View Case Study →</a>
+            </div>
 
-        <div class="project">
-            <h3>Welcome Screen, Work with Color</h3>
-            <p>An exploratory project that tests color combinations and visual hierarchy to create balanced designs.</p>
-            <a href="https://www.figma.com/design/azjFi6lCvGrzFvZPiVQAp4/Welcome-screen--Work-with-color?node-id=0-1&t=a49GJGRQDIVVmwDg-1" target="_blank">View Case Study →</a>
-        </div>
-      
-        <div class="project">
-            <h3>Browse Music, Home Screen</h3>
-            <p>A UX review of Spotify’s browsing experience, focusing on interaction flow, scroll behavior, and layout usability.</p>
-            <a href="https://www.figma.com/design/w4DuiRw2vR6DqkJzk9HjqG/Browse-music--Home-screen?node-id=0-1&t=qA4hAfceT9tldtrW-1" target="_blank">View Case Study →</a>
-        </div>
-      
-        <div class="project">
-            <h3>Calendar Template</h3>
-            <p>A structured calendar placeholder designed using properly configured Auto Layouts to ensure scalability and consistency.</p>
-            <a href="https://www.figma.com/design/l2J2bHoqF8u5WTIFZBLYC2/Calendar-Template?node-id=0-1&t=yOxBMHJd8sFS1DjO-1" target="_blank">View Case Study →</a>
-        </div>
-      
-        <div class="project">
-            <h3>Smart Home App</h3>
-            <p>A minimalist smart-home control interface that emphasizes clarity, balance, and easy user interaction.</p>
-            <a href="https://www.figma.com/design/SBwiBhA2ITwxuOb6unmwR7/Smart-Home-App?node-id=0-1&t=L6N9XUenWOvSoP6C-1" target="_blank">View Case Study →</a>
-        </div>
-    </section>
+            <div class="project">
+                <h3>Welcome Screen, Work with Color</h3>
+                <p>An exploratory project that tests color combinations and visual hierarchy to create balanced designs.</p>
+                <a href="https://www.figma.com/design/azjFi6lCvGrzFvZPiVQAp4/Welcome-screen--Work-with-color?node-id=0-1&t=a49GJGRQDIVVmwDg-1" target="_blank">View Case Study →</a>
+            </div>
+          
+            <div class="project">
+                <h3>Browse Music, Home Screen</h3>
+                <p>A UX review of Spotify’s browsing experience, focusing on interaction flow, scroll behavior, and layout usability.</p>
+                <a href="https://www.figma.com/design/w4DuiRw2vR6DqkJzk9HjqG/Browse-music--Home-screen?node-id=0-1&t=qA4hAfceT9tldtrW-1" target="_blank">View Case Study →</a>
+            </div>
+          
+            <div class="project">
+                <h3>Calendar Template</h3>
+                <p>A structured calendar placeholder designed using properly configured Auto Layouts to ensure scalability and consistency.</p>
+                <a href="https://www.figma.com/design/l2J2bHoqF8u5WTIFZBLYC2/Calendar-Template?node-id=0-1&t=yOxBMHJd8sFS1DjO-1" target="_blank">View Case Study →</a>
+            </div>
+          
+            <div class="project">
+                <h3>Smart Home App</h3>
+                <p>A minimalist smart-home control interface that emphasizes clarity, balance, and easy user interaction.</p>
+                <a href="https://www.figma.com/design/SBwiBhA2ITwxuOb6unmwR7/Smart-Home-App?node-id=0-1&t=L6N9XUenWOvSoP6C-1" target="_blank">View Case Study →</a>
+            </div>
+        </section>
 
-    <footer>
-        <p>© 2026 Leonid Yaniiev. Built with GitHub Pages.</p>
-    </footer>
+        <footer>
+            <p>© 2026 Leonid Yaniiev. Built with GitHub Pages.</p>
+        </footer>
+    </div>
 
 </body>
 </html>
