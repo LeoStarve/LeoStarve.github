@@ -16,9 +16,10 @@
             /* Text Color (Deep Plum) */
             --text-plum: #4B3F72;
             
-            /* UI Elements */
-            --skill-bg: rgba(75, 63, 114, 0.1); /* Plum with transparency */
-            --accent-dark: #2D2442; /* Slightly darker plum for buttons */
+            /* New Accent Colors */
+            --cv-accent: #D66D5B; /* Deep Coral/Terracotta */
+            --cv-accent-hover: #BF5A4A;
+            --skill-bg: rgba(75, 63, 114, 0.1);
         }
 
         html, body {
@@ -32,7 +33,6 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
             line-height: 1.6; 
             color: var(--text-plum); 
-            /* Gradient Background */
             background: linear-gradient(180deg, var(--bg-start) 0%, var(--bg-end) 100%);
             background-repeat: no-repeat;
             background-size: cover;
@@ -61,92 +61,68 @@
             color: var(--text-plum);
         }
 
-        p { color: var(--text-plum); opacity: 0.9; }
-
-        /* Project Cards - Pale Apricot */
-        .project { 
-            margin-bottom: 2.5rem; 
-            padding: 2rem; 
-            border: 1px solid rgba(75, 63, 114, 0.05); 
-            border-radius: 12px; 
-            background-color: var(--card-apricot); 
-            box-shadow: 0 10px 25px rgba(75, 63, 114, 0.1);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        
-        .project:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 15px 35px rgba(75, 63, 114, 0.15);
-        }
-
-        .project h3 { 
-            margin-top: 0; 
-            color: var(--text-plum);
-            font-size: 1.4rem;
-        }
-
-        .project p { color: var(--text-plum); font-weight: 450; opacity: 0.85; }
-
-        /* Links */
-        a { color: var(--text-plum); text-decoration: none; font-weight: 600; }
-        a:hover { text-decoration: underline; }
-
-        .project a { 
+        /* Stand-out Email Line */
+        .email-link {
             display: inline-block;
-            margin-top: 1rem;
-            color: var(--text-plum);
-            text-decoration: underline;
-            text-underline-offset: 4px;
+            margin-right: 15px;
+            padding: 10px 20px;
+            border: 2px solid var(--text-plum);
+            border-radius: 8px;
+            font-weight: 700;
+            transition: all 0.2s ease;
+        }
+        .email-link:hover {
+            background-color: var(--text-plum);
+            color: #ffffff !important;
+            text-decoration: none;
         }
 
-        /* Skills Section */
-        .skills { 
-            display: flex; 
-            flex-wrap: wrap; 
-            gap: 12px; 
-            list-style: none; 
-            padding: 0; 
-            margin-top: 1.5rem;
-        }
-
-        .skills li { 
-            background: var(--skill-bg); 
-            color: var(--text-plum);
-            padding: 6px 16px; 
-            border-radius: 20px; 
-            font-size: 0.9em; 
-            font-weight: 500;
-            backdrop-filter: blur(4px);
-            border: 1px solid rgba(75, 63, 114, 0.1);
-        }
-
-        /* CV Button */
+        /* Updated CV Button */
         .cv-button {
             display: inline-block;
-            background-color: var(--text-plum);
+            background-color: var(--cv-accent);
             color: #ffffff !important;
             padding: 12px 24px;
             border-radius: 8px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             margin-top: 1.5rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 15px rgba(214, 109, 91, 0.3);
             transition: all 0.2s ease;
+            border: 2px solid var(--cv-accent);
         }
 
         .cv-button:hover {
-            background-color: var(--accent-dark);
-            transform: scale(1.02);
+            background-color: var(--cv-accent-hover);
+            border-color: var(--cv-accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(214, 109, 91, 0.4);
             text-decoration: none;
         }
 
-        footer { 
-            margin-top: 5rem; 
-            text-align: center; 
-            font-size: 0.85rem; 
-            color: var(--text-plum); 
-            opacity: 0.6;
+        .project { 
+            margin-bottom: 2.5rem; 
+            padding: 2rem; 
+            border-radius: 12px; 
+            background-color: var(--card-apricot); 
+            box-shadow: 0 10px 25px rgba(75, 63, 114, 0.1);
+            transition: transform 0.2s ease;
         }
+        
+        .project:hover { transform: translateY(-4px); }
+        .project h3 { margin-top: 0; color: var(--text-plum); }
+        .project a { font-weight: 600; text-decoration: underline; color: var(--text-plum); }
+
+        .skills { display: flex; flex-wrap: wrap; gap: 12px; list-style: none; padding: 0; }
+        .skills li { 
+            background: var(--skill-bg); 
+            padding: 6px 16px; 
+            border-radius: 20px; 
+            font-size: 0.9em; 
+            border: 1px solid rgba(75, 63, 114, 0.1);
+        }
+
+        footer { margin-top: 5rem; text-align: center; opacity: 0.6; }
     </style>
 </head>
 <body>
@@ -154,9 +130,13 @@
     <div class="container">
         <header>
             <h1>Leonid Yaniiev</h1>
-            <p style="font-size: 1.1rem; font-weight: 500;">UI/UX Designer | Specializing in Mobile Product Design & User Research</p>
-            <p><a href="mailto:yaniyev.leonid@email.com">📧 Email Me</a></p>
-            <a href="Leonid Yaniiev - UI-UX CV.pdf" class="cv-button" target="_blank">📄 Download CV</a>
+            <p style="font-size: 1.1rem; font-weight: 500; margin-bottom: 2rem;">
+                UI/UX Designer | Specializing in Mobile Product Design & User Research
+            </p>
+            <div class="cta-area">
+                <a href="mailto:yaniyev.leonid@email.com" class="email-link">📧 Email Me</a>
+                <a href="Leonid_Yaniiev_CV.pdf" class="cv-button" target="_blank">📄 Download CV</a>
+            </div>
         </header>
 
         <section>
